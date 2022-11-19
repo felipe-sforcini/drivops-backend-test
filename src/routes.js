@@ -10,6 +10,7 @@ const deleteSeller = require('./controllers/deleteSeller');
 const authToken = require('./middlewares/auth');
 const registerSale = require('./controllers/registerSale');
 const showSales = require('./controllers/showSales');
+const salesBySellers = require('./controllers/dashboards/salesBySellers');
 
 const routes = express();
 
@@ -22,6 +23,7 @@ routes.post('/vendas', registerSale);
 routes.get('/carros', showCars);
 routes.get('/vendedores', showSellers);
 routes.get('/vendas', showSales);
+routes.get('/dashboards/sales-by-sellers', salesBySellers);
 
 routes.delete('/carros/:id', deleteCar);
 routes.delete('/vendedores/:id', deleteSeller)
