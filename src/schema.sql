@@ -1,4 +1,4 @@
-DROP TABLE carros IF EXISTS;
+DROP TABLE IF EXISTS carros;
 
 CREATE TABLE carros(
 	id serial primary key,
@@ -6,7 +6,7 @@ CREATE TABLE carros(
   valor int not null
 );
 
-DROP TABLE vendedores IF EXISTS;
+DROP TABLE IF EXISTS vendedores;
 
 CREATE TABLE vendedores(
     id serial primary key,
