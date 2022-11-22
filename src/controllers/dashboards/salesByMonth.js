@@ -16,7 +16,9 @@ const salesByMonth = async (req, res) => {
             return runResponse(400, 'Não existem vendas cadastradas', res);
         }
 
-        return res.status(200).json(sales);
+        const salesMonth = sales.rows;
+
+        return res.status(200).json(salesMonth);
     } catch (error) {
         displayError(error, res)
     }
