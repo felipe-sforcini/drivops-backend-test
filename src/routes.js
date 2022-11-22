@@ -12,6 +12,7 @@ const registerSale = require('./controllers/registerSale');
 const showSales = require('./controllers/showSales');
 const salesBySellers = require('./controllers/dashboards/salesBySellers');
 const teste = require('./controllers/teste');
+const salesByMonth = require('./controllers/dashboards/salesByMonth');
 
 const routes = express();
 
@@ -25,6 +26,7 @@ routes.get('/carros', showCars);
 routes.get('/vendedores', showSellers);
 routes.get('/vendas', showSales);
 routes.get('/dashboards/sales-by-sellers', salesBySellers);
+routes.get('/dashboards/sales-by-month', salesByMonth);
 routes.get('/teste', teste)
 
 routes.delete('/carros/:id', deleteCar);
